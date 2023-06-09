@@ -1,4 +1,5 @@
 import { AiOutlineMenu } from "react-icons/ai";
+
 interface NavbarProps {
   activeLink: string;
   sideBarToggle: (status: boolean) => void;
@@ -13,7 +14,7 @@ export default function Navbar({ activeLink, sideBarToggle }: NavbarProps) {
       >
         <AiOutlineMenu />
       </div>
-      <h2>{activeLink}</h2>
+      <h2 className="lg:text-2xl">{activeLink}</h2>
       <div className="flex items-center gap-1 md:gap-3 cursor-pointer">
         <img src="/search.svg" alt="search" />
         <img src="/notifications.svg" alt="notification" />

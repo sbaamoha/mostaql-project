@@ -12,14 +12,15 @@ export default function Main() {
     <div className="p-3 md:p-6 flex flex-col md:flex-row gap-2">
       <div>
         <Banner />
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 my-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-10 gap-y-3 my-6">
           {carts.map(({ name, number }, i) => (
             <Cart title={name} number={number} key={i} />
           ))}
         </div>
 
         <div>
-          <BarChart />
+          {/* <BarChart /> */}
+          <img src="/barchart.svg" alt="" />
         </div>
       </div>
       <div className="border-lightGray py-6 border-2 p-6 rounded-xl ">

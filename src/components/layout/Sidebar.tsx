@@ -18,7 +18,7 @@ export default function Sidebar({
     <nav
       className={`absolute -right-[100%] z-10 ${
         sideBarOpen && "right-0"
-      } md:relative md:right-0 p-6 w-1/2 md:w-1/5 transition-all bg-lightGray md:flex  h-screen `}
+      } md:relative md:right-0 p-6 w-1/2 md:w-1/5 transition-all bg-lightGray md:flex  h-[120vh] `}
     >
       {sideBarOpen && (
         <div
@@ -28,11 +28,11 @@ export default function Sidebar({
           <BiMenuAltRight />
         </div>
       )}
-      <ul className="flex flex-col">
-        <div className="py-8 pb-12">
-          <img src="/logo.svg" alt="logo" />
-        </div>
+      <ul className="flex flex-col justify-between">
         <div>
+          <div className="py-8 pb-12">
+            <img src="/logo.svg" alt="logo" />
+          </div>
           {navLinks.map((link, i) => (
             <Link
               key={i}
@@ -53,7 +53,7 @@ export default function Sidebar({
             </Link>
           ))}
         </div>
-        <div className="my-auto">
+        <div className="">
           <li
             className={`flex items-center gap-3 py-4 px-4 rounded-lg text-gray cursor-pointer`}
           >

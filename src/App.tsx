@@ -2,14 +2,18 @@ import { Routes, Route, BrowserRouter } from "react-router-dom";
 import { routes } from "./routes";
 import Sidebar from "./components/layout/Sidebar";
 import Navbar from "./components/layout/Navbar";
+import { navLinks } from "./utils/utils";
 import { useState } from "react";
-
 function App() {
-  const [activeLink, setactiveLink] = useState("الرئيسية");
+  const currentPage = navLinks.filter(
+    (link) => link.url === window.location.href.split("/")[3]
+  );
+  const [activeLink, setactiveLink] = useState(currentPage[0].name);
   const [sideBarOpen, setsideBarOpen] = useState(false);
   const setactiveLinkFunction = (value: string) => {
     setactiveLink(value);
   };
+
   const sideBarToggle = (value: boolean) => {
     setsideBarOpen(value);
   };

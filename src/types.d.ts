@@ -22,3 +22,9 @@ type CartType = {
   name: string;
   number: string;
 };
+type DemandsType = {
+  name: string;
+  selected: boolean;
+  status: string;
+  title: string;
+};

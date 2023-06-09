@@ -5,7 +5,7 @@ export const navLinks: LinkType[] = [
     img: "/sidebar1.svg",
   },
   {
-    url: "data",
+    url: "#",
     name: "بيانات المنشأة",
     img: "/sidebar2.svg",
   },
@@ -15,17 +15,17 @@ export const navLinks: LinkType[] = [
     img: "/sidebar3.svg",
   },
   {
-    url: "bucket",
+    url: "#",
     name: "المحفظة",
     img: "/sidebar4.svg",
   },
   {
-    url: "tasks",
+    url: "#",
     name: "العمليات",
     img: "/sidebar5.svg",
   },
   {
-    url: "settings",
+    url: "#",
     name: "الاعدادات",
     img: "/sidebar6.svg",
   },
@@ -49,4 +49,24 @@ export const carts: CartType[] = [
   { name: "المبلغ المسدد", number: "20,476.00" },
   { name: "مبلغ التمويل", number: "30,476.00" },
   { name: "الدفعات المتبقية", number: "10,000.00" },
+];
+export const demands: DemandsType[] = [
+  {
+    selected: true,
+    status: "draft",
+    title: "شراء منتجات ذات استخدام الواد",
+    name: "بن محمد محمدحسن",
+  },
+  {
+    selected: false,
+    status: "studying",
+    title: "شراء منتجات ذات استخدام الواد",
+    name: "بن محمد محمدحسن",
+  },
+  {
+    selected: false,
+    status: "done",
+    title: "شراء منتجات ذات استخدام الواد",
+    name: "بن محمد محمدحسن",
+  },
 ];
