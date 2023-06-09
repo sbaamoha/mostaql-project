@@ -5,7 +5,7 @@ import Infos from "../components/Infos";
 import Avatar from "../components/common/Avatar";
 import { carts, mostacharInfos } from "../utils/utils";
 import Cart from "../components/common/Cart";
-import BarChart from "../components/BarChart";
+// import BarChart from "../components/BarChart";
 
 export default function Main() {
   return (
