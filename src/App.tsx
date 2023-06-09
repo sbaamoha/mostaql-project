@@ -9,7 +9,7 @@ function App() {
     (link) => link.url === window.location.href.split("/")[3]
   );
   const [activeLink, setactiveLink] = useState(
-    currentPage[0].name || "الرئيسية"
+    currentPage[0]?.name || "الرئيسية"
   );
   const [sideBarOpen, setsideBarOpen] = useState(false);
   const setactiveLinkFunction = (value: string) => {
