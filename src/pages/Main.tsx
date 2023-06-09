@@ -5,9 +5,16 @@ import Infos from "../components/Infos";
 import Avatar from "../components/common/Avatar";
 import { carts, mostacharInfos } from "../utils/utils";
 import Cart from "../components/common/Cart";
-// import BarChart from "../components/BarChart";
+import BarChart from "../components/BarChart";
+import { useState } from "react";
+import Switch from "../components/common/Switch";
+import DatePickerInput from "../components/common/DatePicker";
 
 export default function Main() {
+  const [selectedDate, setSelectedDate] = useState<Date | null>(null);
+  const handleDateChange = (date: Date) => {
+    setSelectedDate(date);
+  };
   return (
     <div className="p-3 md:p-6 flex flex-col md:flex-row gap-2">
       <div>
@@ -19,8 +26,21 @@ export default function Main() {
         </div>
 
         <div>
-          {/* <BarChart /> */}
-          <img src="/barchart.svg" alt="" />
+          <div className="flex items-center justify-between">
+            <h2 className="text-md md:text-lg lg:text-2xl">
+              توزيع مبالغ التمويل
+            </h2>
+            <div className="flex items-center gap-2">
+              <Switch checked={false} id="one" title="المبلغ المسدد" />
+              <Switch checked={true} id="two" title="الدفعات المتبقية" />
+            </div>
+            <DatePickerInput
+              selected={selectedDate}
+              handleDateChange={handleDateChange}
+            />
+          </div>
+          <BarChart />
+          {/* <img src="/barchart.svg" alt="" /> */}
         </div>
       </div>
       <div className="border-lightGray py-6 border-2 p-6 rounded-xl ">

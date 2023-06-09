@@ -5,7 +5,7 @@ export const navLinks: LinkType[] = [
     img: "/sidebar1.svg",
   },
   {
-    url: "#",
+    url: "data",
     name: "بيانات المنشأة",
     img: "/sidebar2.svg",
   },
@@ -15,17 +15,17 @@ export const navLinks: LinkType[] = [
     img: "/sidebar3.svg",
   },
   {
-    url: "#",
+    url: "bucket",
     name: "المحفظة",
     img: "/sidebar4.svg",
   },
   {
-    url: "#",
+    url: "processes",
     name: "العمليات",
     img: "/sidebar5.svg",
   },
   {
-    url: "#",
+    url: "settings",
     name: "الاعدادات",
     img: "/sidebar6.svg",
   },

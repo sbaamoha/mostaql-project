@@ -19,27 +19,29 @@ export default function Demand({ demand }: DemandProps) {
       : "text-success bg-green-200";
   return (
     <div
-      className={`py-6 px-3 border-2 rounded-xl ${
+      className={`py-6 px-3 border-2 rounded-xl flex flex-col gap-2 ${
         selected ? "border-teal" : "border-lightGray"
       }`}
     >
       <div className="flex items-center justify-between">
-        <p
+        <h2
           className={`inline-block py-1 px-2 ${btnStyle} rounded-md cursor-pointer hover:opacity-75 `}
         >
           {status === "draft" && "مسودة"}
           {status === "studying" && "تحت الدراسة"}
           {status === "done" && "منفذة"}
-        </p>
+        </h2>
         <span className="flex gap-2 text-2xl cursor-pointer ">
           <LuEdit className="hover:opacity-75" />
           <RiDeleteBin5Line className="hover:opacity-75" />
         </span>
       </div>
+
       <div className="my-3 flex items-center gap-2 text-lg">
         <CiBookmark className="text-3xl opacity-40" />
         <h2>شراء منتجات ذات استخدام الواد </h2>
       </div>
+
       <div className="flex items-center justify-around">
         <p className="inline-block text-xs py-1 px-2 rounded-2xl bg-lightGray border border-gray">
           اسم الجهة
@@ -48,27 +50,40 @@ export default function Demand({ demand }: DemandProps) {
           تاريخ إنجاز المشروع
         </p>
       </div>
-      <div className="flex items-center justify-evenly my-2">
+
+      <div className="flex items-center justify-evenly mb-3">
         <p className="text-sm text-gray">{name} </p>
         <p className="text-sm text-gray">31-03-2023 </p>
       </div>
 
       <div className="flex items-center justify-around ">
-        <p className="text-xs py-1 px-2 rounded-2xl bg-lightGray border border-gray flex items-center gap-1">
-          <BiDollarCircle />
-          مبلغ التمويل
-        </p>
-        <div className="w-[1px] h-[20px] bg-black" />
-        <p className="text-xs py-1 px-2 rounded-2xl bg-lightGray border border-gray flex items-center gap-1">
-          <BsFillCalendarDateFill />
-          مدة التمويل
-        </p>
-        <div className="w-[1px] h-[20px] bg-black " />
-        <p className="text-xs py-1 px-2 rounded-2xl bg-lightGray border border-gray flex items-center gap-1">
-          <FiFilter />
-          نوع التمويل
-        </p>
+        <div className="flex flex-col items-center gap-2">
+          <p className="text-xs py-1 px-2 rounded-2xl bg-lightGray border border-gray flex items-center gap-1">
+            <BiDollarCircle />
+            مبلغ التمويل
+          </p>
+          <p className="text-gray">30,000.000</p>
+        </div>
+        <div className="w-[1px] h-[45px] bg-gray" />
+        <div className="flex flex-col items-center gap-2">
+          <p className="text-xs py-1 px-2 rounded-2xl bg-lightGray border border-gray flex items-center gap-1">
+            <BsFillCalendarDateFill />
+            مدة التمويل
+          </p>
+          <p className="text-gray">قصير الأجل</p>
+        </div>
+        <div className="w-[1px] h-[45px] bg-gray " />
+        <div className="flex flex-col items-center gap-2">
+          <p className="text-xs py-1 px-2 rounded-2xl bg-lightGray border border-gray flex items-center gap-1">
+            <FiFilter />
+            نوع التمويل
+          </p>
+          <p className="text-gray">تمويل مشاريع</p>
+        </div>
       </div>
+
+      {/* <div className="flex items-center justify-around  text-gray">
+      </div> */}
     </div>
   );
 }
